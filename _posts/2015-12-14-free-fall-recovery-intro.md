@@ -39,7 +39,7 @@ steps, the previous stabilization mechanisms are still in effect. For example,
 once we have stabilized our vertical velocity, we do not want our quad to fall like
 a rock if our new goal is to stabilize our horizontal velocity.
 
-{% img modules magick:2x alt:'Figure 1-1' %}{: .center-image }
+{% image modules magick:2x alt:'Figure 1-1' %}{: .center-image }
 <center><strong>Figure 1 : Stabilization phases</strong></center>
 
 The module structure is shown above. Let's go through it quickly. Some of these
