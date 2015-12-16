@@ -2,7 +2,16 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-assets]
+
+# Assets
+assets:
+  assets:
+    - "*.png"
+    - "*.jpg"
+    - "*.svg"
+  sources:
+    - "_assets/"
 
 # Setup
 title:               dtsbourg
