@@ -11,19 +11,19 @@
 
   <title>
     
-      Hello world ! &middot; dtsbourg
+      A primer on control methods &middot; dtsbourg
     
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
-  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
-  <link rel="stylesheet" href="http://localhost:4000/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://dtsbourg.github.io/public/css/poole.css">
+  <link rel="stylesheet" href="http://dtsbourg.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="http://dtsbourg.github.io/public/css/lanyon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="http://localhost:4000/public/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://dtsbourg.github.io/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="http://dtsbourg.github.io/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -84,7 +84,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="http://localhost:4000/" title="Home">dtsbourg</a>
+            <a href="http://dtsbourg.github.io/" title="Home">dtsbourg</a>
             <small>Dylan Bourgeois</small>
           </h3>
         </div>
@@ -92,9 +92,48 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Hello world !</h1>
-  <span class="post-date">01 Aug 2015</span>
-  <p>Welcome to dtsbourg.github.io. It’s quite empty for now but hopefully lots of stuff coming :) Stay tuned !</p>
+  <h1 class="post-title">A primer on control methods</h1>
+  <span class="post-date">20 Dec 2015</span>
+  <p>I’ve been rambling on about control algorithm and errors and sensing and estimates,
+but that doesn’t make it clearer as to how does it <strong>actually</strong> work ! Here’s a quick
+primer, which I will probably expand on in a following post.</p>
+
+<h2 id="indirection">Indirection</h2>
+
+<p>The essential idea here is that there is a bridge between reality and what the drone
+(or whatever robot or device you are trying to control) actually perceives.
+Nevertheless we need a way to associate the outside world to how the quad sees itself.</p>
+
+<p>The first consideration is : how do we define the state the drone is in ? We need
+a consistent, reproducible way to express where the drone is and how it is behaving.
+For that we use <strong>state variables</strong> : the minimal set of information you need to
+accurately pinpoint the behavior of what you are observing or controlling. In our
+context this will consist of a certain number of parameters : acceleration, speed,
+position, attitude. This set of 12 variables (3 for each) is sufficient to accurately
+depict the drone’s state.</p>
+
+<p>Now to the fun part : how do these variables relate to outside world and how do we
+have control over them ? As you recall me mentioning, the outside world is messy
+and full of errors : we can’t just assign these variables to the values measured
+by our sensors. Instead, a layer of abstraction is added between the two worlds :
+the state estimate is updated through a kind of blackbox that will process the data
+coming in so it makes sense to the estimate (just like we did for MSF), but it is also
+updated by the control mechanism. The tricky part is, the control mechanism itself
+relies on the previous state estimate : the loop is looped, and we get something
+that looks a bit like the following figure.</p>
+
+<!-- Figure 1 -->
+
+<h2 id="actual-control">Actual control</h2>
+
+<p>A control algorithm can be defined in a simple way : it is a mathematical function
+which when given an input (a state estimate) and a command (a desired state) will
+spit out the new state estimate that will lead to our command. We can then apply
+this computed state to our controlled object to obtain the desired effect : for
+example by applying a certain thrust value to certain motor to move in the commanded
+direction.</p>
+
+<h2 id="pid-controllers">PID Controllers</h2>
 
 </div>
 
@@ -104,9 +143,18 @@
     
       <li>
         <h3>
-          <a href="http://localhost:4000//2015/12/14/free-fall-recovery-intro/">
+          <a href="http://dtsbourg.github.io//2015/12/14/free-fall-recovery-intro/">
             Free-fall recovery
             <small>14 Dec 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="http://dtsbourg.github.io//2015/08/01/hello-world/">
+            Hello world !
+            <small>01 Aug 2015</small>
           </a>
         </h3>
       </li>
@@ -146,8 +194,8 @@
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		ga('create', 'UA-65856095-1', 'auto');
 		ga('send', 'pageview', {
-		  'page': '/2015/08/01/hello-world/',
-		  'title': 'Hello world !'
+		  'page': '/2015/12/20/a-primer-on-control-methods/',
+		  'title': 'A primer on control methods'
 		});
 	</script>
 	<!-- End Google Analytics -->
