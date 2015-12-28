@@ -16,14 +16,14 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
-  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
-  <link rel="stylesheet" href="http://localhost:4000/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://dtsbourg.github.io/public/css/poole.css">
+  <link rel="stylesheet" href="http://dtsbourg.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="http://dtsbourg.github.io/public/css/lanyon.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="http://localhost:4000/public/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://dtsbourg.github.io/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="http://dtsbourg.github.io/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -84,7 +84,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="http://localhost:4000/" title="Home">dtsbourg</a>
+            <a href="http://dtsbourg.github.io/" title="Home">dtsbourg</a>
             <small>Dylan Bourgeois</small>
           </h3>
         </div>
@@ -161,7 +161,7 @@ Once the threshold is crossed, we can start off the second phase : attitude cont
 your quad’s orientation in space. For that, three angles are used : <em>yaw</em>, <em>pitch</em> and <em>roll</em>.</p>
 
 <p><img src="/assets/attitude.jpg" magick="2x" alt="Figure 3-1" width="507" height="342" class="center-image" /></p>
-<center><strong>Figure 3 : A quad with an attitude</strong></center>
+<center><strong>Figure 3 : A quad with an attitude [^2]</strong></center>
 
 <p>The first stabilization we need to accomplish is to get the quad back upright :
 we need roll and pitch angles to be 0 so we can be horizontal with respect to
@@ -189,7 +189,7 @@ only one sensor but rather a subtle mix of different information from different 
 MSF, or <a href="https://en.wikipedia.org/wiki/Sensor_fusion">Multi-Sensor Fusion</a>.
 This technique is used throughout our project and is an easy way to have the most
 accurate estimate possible, essential to have a functional control algorithm. For
-the altitude we will use a combination of a sonar <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>, our GPS and a barometer <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</p>
+the altitude we will use a combination of a sonar <sup id="fnref:3"><a href="#fn:3" class="footnote">2</a></sup>, our GPS and a barometer <sup id="fnref:4"><a href="#fn:4" class="footnote">3</a></sup>.</p>
 
 <h3 id="horizontal-velocity">Horizontal velocity</h3>
 
@@ -204,7 +204,7 @@ effect to our advantage in this step : if we’re drifting “back”, we just h
 force it to move forwards, cancelling the previous movement !</p>
 
 <p><img src="/assets/quadrotor_movement.jpg" magick="2x" alt="Figure 4-1" width="600" height="400" class="center-image" /></p>
-<center><strong>Figure 4 : How does a quadcopter get around ?</strong></center>
+<center><strong>Figure 4 : How does a quadcopter get around ? [^5]</strong></center>
 
 <h3 id="position-locking">Position locking</h3>
 
@@ -267,7 +267,7 @@ carried out on our platform.</p>
 <p>One of the major drawbacks of our method is the use of a GPS, which restricts its
 usage to outdoor configurations. Nevertheless it is not a technical limitation to
 add an optical tracking method to the algorithm, for example with a <a href="https://pixhawk.org/modules/px4flow">PX4Flow</a> sensor
-or a simple laser motion sensor, like the ADNS 9800 <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup> which is used in computer
+or a simple laser motion sensor, like the ADNS 9800 <sup id="fnref:6"><a href="#fn:6" class="footnote">4</a></sup> which is used in computer
 mice. They use a very interesting method called <a href="https://en.wikipedia.org/wiki/Optical_flow">optical flow</a>. The idea is that there
 is no need for an optical sensor to have a high resolution or a acute knowledge
 of what it’s looking at. Instead, we compute a difference between two successive
@@ -275,7 +275,7 @@ images, from which we can deduce a movement vector which tells us in what direct
 and how fast we are moving.</p>
 
 <p><img src="/assets/optical_flow.png" magick="2x" alt="Figure 5-1" width="640" height="339" class="center-image" /></p>
-<center><strong>Figure 5 : Optical flow method</strong></center>
+<center><strong>Figure 5 : Optical flow method [^7]</strong></center>
 
 <h2 id="wrapping-up">Wrapping up</h2>
 
@@ -293,14 +293,14 @@ of control theory allows for some impressive results using only very simple conc
     <li id="fn:1">
       <p>IEEE International Conference on Robotics and Automation (ICRA), Seattle, 2015, <a href="http://rpg.ifi.uzh.ch/docs/ICRA15_Faessler.pdf">Link</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
-    <li id="fn:2">
-      <p>Reference : MB1242 I2CXL Sonar, <a href="http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf">Datasheet</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
-    </li>
     <li id="fn:3">
-      <p>Reference : BMP085 Barometer, <a href="https://www.adafruit.com/datasheets/BMP085_DataSheet_Rev.1.0_01July2008.pdf">Datasheet</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+      <p>Reference : MB1242 I2CXL Sonar, <a href="http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf">Datasheet</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:4">
-      <p>Reference : ADNS 9800 HD Optical Flow Sensor, <a href="http://www.pixart.com.tw/upload/ADNS-9800%20DS_S_V1.0_20130514144352.pdf">Datasheet</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+      <p>Reference : BMP085 Barometer, <a href="https://www.adafruit.com/datasheets/BMP085_DataSheet_Rev.1.0_01July2008.pdf">Datasheet</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>Reference : ADNS 9800 HD Optical Flow Sensor, <a href="http://www.pixart.com.tw/upload/ADNS-9800%20DS_S_V1.0_20130514144352.pdf">Datasheet</a> <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -313,7 +313,16 @@ of control theory allows for some impressive results using only very simple conc
     
       <li>
         <h3>
-          <a href="http://localhost:4000//2015/08/01/hello-world/">
+          <a href="http://dtsbourg.github.io//2015/12/20/a-primer-on-control-methods/">
+            A primer on control methods
+            <small>20 Dec 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="http://dtsbourg.github.io//2015/08/01/hello-world/">
             Hello world !
             <small>01 Aug 2015</small>
           </a>
