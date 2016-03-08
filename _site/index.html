@@ -138,7 +138,8 @@ steps, the previous stabilization mechanisms are still in effect. For example,
 once we have stabilized our vertical velocity, we do not want our quad to fall like
 a rock if our new goal is to stabilize our horizontal velocity.</p>
 
-<p><img src="/assets/modules.svg" magick="2x" alt="Figure 1-1" class="center-image" /></p>
+<p><img src="/assets/modules.svg" alt="test" class="center-image" /></p>
+
 <center><strong>Figure 1 : Stabilization phases</strong></center>
 
 <p>The module structure is shown above. Let’s go through it quickly. Some of these
@@ -155,7 +156,8 @@ a threshold under which we can assume the object is falling. Also, we will be lo
 at a mean value over a given number of samples to make sure we’re actually seeing
 what we want to see and not just noise : this is called a <a href="https://en.wikipedia.org/wiki/Moving_average">moving average</a>.</p>
 
-<p><img src="/assets/sma_pres_big.png" alt="Figure 2-1" width="720" height="413" class="center-image" /></p>
+<p><img src="/assets/sma_pres_big.png" alt="test" class="center-image" /></p>
+
 <center><strong>Figure 2 : Acceleration measured over time (in ms)</strong></center>
 
 <p>As you will notice in the above the figure, there is a large peak when the quad is thrown,
@@ -168,8 +170,8 @@ Once the threshold is crossed, we can start off the second phase : attitude cont
 (or whatever coordinate system you chose). You now need to figure out how to express
 your quad’s orientation in space. For that, three angles are used : <em>yaw</em>, <em>pitch</em> and <em>roll</em>.</p>
 
-<p><img src="/assets/attitude.jpg" magick="2x" alt="Figure 3-1" width="507" height="342" class="center-image" /></p>
-<center><strong>Figure 3 : A quad with an attitude [^2]</strong></center>
+<p><img src="/assets/attitude.jpg" alt="test" class="center-image" /></p>
+<center><strong>Figure 3 : A quad with an attitude [2] </strong></center>
 
 <p>The first stabilization we need to accomplish is to get the quad back upright :
 we need roll and pitch angles to be 0 so we can be horizontal with respect to
@@ -211,7 +213,7 @@ the back propellers will incline the drone forward and make it move. We can use 
 effect to our advantage in this step : if we’re drifting “back”, we just have to
 force it to move forwards, cancelling the previous movement !</p>
 
-<p><img src="/assets/quadrotor_movement.jpg" magick="2x" alt="Figure 4-1" width="600" height="400" class="center-image" /></p>
+<p><img src="/assets/quadrotor_movement.jpg" alt="test" class="center-image" /></p>
 <center><strong>Figure 4 : How does a quadcopter get around ? [^5]</strong></center>
 
 <h3 id="position-locking">Position locking</h3>
@@ -282,7 +284,7 @@ of what it’s looking at. Instead, we compute a difference between two successi
 images, from which we can deduce a movement vector which tells us in what direction
 and how fast we are moving.</p>
 
-<p><img src="/assets/optical_flow.png" magick="2x" alt="Figure 5-1" width="640" height="339" class="center-image" /></p>
+<p><img src="/assets/optical_flow.png" alt="test" class="center-image" /></p>
 <center><strong>Figure 5 : Optical flow method [^7]</strong></center>
 
 <h2 id="wrapping-up">Wrapping up</h2>
