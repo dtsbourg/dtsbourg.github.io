@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>dtsbourg</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2015-12-17T10:13:48+01:00</updated>
- <id>http://localhost:4000</id>
+ <link href="http://dtsbourg.github.io/atom.xml" rel="self"/>
+ <link href="http://dtsbourg.github.io/"/>
+ <updated>2016-03-08T16:52:20+01:00</updated>
+ <id>http://dtsbourg.github.io</id>
  <author>
    <name>Dylan Bourgeois</name>
    <email>dtsbourg@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Free-fall recovery</title>
-   <link href="http://localhost:4000/2015/12/14/free-fall-recovery-intro/"/>
+   <link href="http://dtsbourg.github.io/2015/12/14/free-fall-recovery-intro/"/>
    <updated>2015-12-14T00:00:00+01:00</updated>
-   <id>http://localhost:4000/2015/12/14/free-fall-recovery-intro</id>
+   <id>http://dtsbourg.github.io/2015/12/14/free-fall-recovery-intro</id>
    <content type="html">&lt;p&gt;An account of my internship at &lt;a href=&quot;http://lis.epfl.ch/&quot;&gt;LIS&lt;/a&gt;. You can find most of the code
 on &lt;a href=&quot;https://github.com/lis-epfl/MAVRIC_Library/tree/throw-recovery&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
@@ -84,7 +84,7 @@ Once the threshold is crossed, we can start off the second phase : attitude cont
 your quad’s orientation in space. For that, three angles are used : &lt;em&gt;yaw&lt;/em&gt;, &lt;em&gt;pitch&lt;/em&gt; and &lt;em&gt;roll&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/attitude.jpg&quot; magick=&quot;2x&quot; alt=&quot;Figure 3-1&quot; width=&quot;507&quot; height=&quot;342&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;strong&gt;Figure 3 : A quad with an attitude&lt;/strong&gt;&lt;/center&gt;
+&lt;center&gt;&lt;strong&gt;Figure 3 : A quad with an attitude [^2]&lt;/strong&gt;&lt;/center&gt;
 
 &lt;p&gt;The first stabilization we need to accomplish is to get the quad back upright :
 we need roll and pitch angles to be 0 so we can be horizontal with respect to
@@ -112,7 +112,7 @@ only one sensor but rather a subtle mix of different information from different 
 MSF, or &lt;a href=&quot;https://en.wikipedia.org/wiki/Sensor_fusion&quot;&gt;Multi-Sensor Fusion&lt;/a&gt;.
 This technique is used throughout our project and is an easy way to have the most
 accurate estimate possible, essential to have a functional control algorithm. For
-the altitude we will use a combination of a sonar &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, our GPS and a barometer &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+the altitude we will use a combination of a sonar &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, our GPS and a barometer &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;horizontal-velocity&quot;&gt;Horizontal velocity&lt;/h3&gt;
 
@@ -127,7 +127,7 @@ effect to our advantage in this step : if we’re drifting “back”, we just h
 force it to move forwards, cancelling the previous movement !&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/quadrotor_movement.jpg&quot; magick=&quot;2x&quot; alt=&quot;Figure 4-1&quot; width=&quot;600&quot; height=&quot;400&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;strong&gt;Figure 4 : How does a quadcopter get around ?&lt;/strong&gt;&lt;/center&gt;
+&lt;center&gt;&lt;strong&gt;Figure 4 : How does a quadcopter get around ? [^5]&lt;/strong&gt;&lt;/center&gt;
 
 &lt;h3 id=&quot;position-locking&quot;&gt;Position locking&lt;/h3&gt;
 
@@ -190,7 +190,7 @@ carried out on our platform.&lt;/p&gt;
 &lt;p&gt;One of the major drawbacks of our method is the use of a GPS, which restricts its
 usage to outdoor configurations. Nevertheless it is not a technical limitation to
 add an optical tracking method to the algorithm, for example with a &lt;a href=&quot;https://pixhawk.org/modules/px4flow&quot;&gt;PX4Flow&lt;/a&gt; sensor
-or a simple laser motion sensor, like the ADNS 9800 &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; which is used in computer
+or a simple laser motion sensor, like the ADNS 9800 &lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; which is used in computer
 mice. They use a very interesting method called &lt;a href=&quot;https://en.wikipedia.org/wiki/Optical_flow&quot;&gt;optical flow&lt;/a&gt;. The idea is that there
 is no need for an optical sensor to have a high resolution or a acute knowledge
 of what it’s looking at. Instead, we compute a difference between two successive
@@ -198,7 +198,7 @@ images, from which we can deduce a movement vector which tells us in what direct
 and how fast we are moving.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/optical_flow.png&quot; magick=&quot;2x&quot; alt=&quot;Figure 5-1&quot; width=&quot;640&quot; height=&quot;339&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;strong&gt;Figure 5 : Optical flow method&lt;/strong&gt;&lt;/center&gt;
+&lt;center&gt;&lt;strong&gt;Figure 5 : Optical flow method [^7]&lt;/strong&gt;&lt;/center&gt;
 
 &lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;
 
@@ -216,14 +216,14 @@ of control theory allows for some impressive results using only very simple conc
     &lt;li id=&quot;fn:1&quot;&gt;
       &lt;p&gt;IEEE International Conference on Robotics and Automation (ICRA), Seattle, 2015, &lt;a href=&quot;http://rpg.ifi.uzh.ch/docs/ICRA15_Faessler.pdf&quot;&gt;Link&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Reference : MB1242 I2CXL Sonar, &lt;a href=&quot;http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf&quot;&gt;Datasheet&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;Reference : BMP085 Barometer, &lt;a href=&quot;https://www.adafruit.com/datasheets/BMP085_DataSheet_Rev.1.0_01July2008.pdf&quot;&gt;Datasheet&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Reference : MB1242 I2CXL Sonar, &lt;a href=&quot;http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf&quot;&gt;Datasheet&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;Reference : ADNS 9800 HD Optical Flow Sensor, &lt;a href=&quot;http://www.pixart.com.tw/upload/ADNS-9800%20DS_S_V1.0_20130514144352.pdf&quot;&gt;Datasheet&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Reference : BMP085 Barometer, &lt;a href=&quot;https://www.adafruit.com/datasheets/BMP085_DataSheet_Rev.1.0_01July2008.pdf&quot;&gt;Datasheet&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;Reference : ADNS 9800 HD Optical Flow Sensor, &lt;a href=&quot;http://www.pixart.com.tw/upload/ADNS-9800%20DS_S_V1.0_20130514144352.pdf&quot;&gt;Datasheet&lt;/a&gt; &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -232,9 +232,9 @@ of control theory allows for some impressive results using only very simple conc
  
  <entry>
    <title>Hello world !</title>
-   <link href="http://localhost:4000/2015/08/01/hello-world/"/>
+   <link href="http://dtsbourg.github.io/2015/08/01/hello-world/"/>
    <updated>2015-08-01T00:00:00+02:00</updated>
-   <id>http://localhost:4000/2015/08/01/hello-world</id>
+   <id>http://dtsbourg.github.io/2015/08/01/hello-world</id>
    <content type="html">&lt;p&gt;Welcome to dtsbourg.github.io. It’s quite empty for now but hopefully lots of stuff coming :) Stay tuned !&lt;/p&gt;
 </content>
  </entry>

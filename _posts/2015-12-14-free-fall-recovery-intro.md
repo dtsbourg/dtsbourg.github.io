@@ -70,7 +70,7 @@ To define where a quadcopter is in space, you need your regular *x*, *y*, *z* co
 your quad's orientation in space. For that, three angles are used : *yaw*, *pitch* and *roll*.
 
 {% image attitude magick:2x alt:'Figure 3-1' %}{: .center-image }
-<center><strong>Figure 3 : A quad with an attitude</strong></center>
+<center><strong>Figure 3 : A quad with an attitude [^2]</strong></center>
 
 The first stabilization we need to accomplish is to get the quad back upright :
 we need roll and pitch angles to be 0 so we can be horizontal with respect to
@@ -98,7 +98,7 @@ only one sensor but rather a subtle mix of different information from different 
 MSF, or [Multi-Sensor Fusion](https://en.wikipedia.org/wiki/Sensor_fusion).
 This technique is used throughout our project and is an easy way to have the most
 accurate estimate possible, essential to have a functional control algorithm. For
-the altitude we will use a combination of a sonar [^2], our GPS and a barometer [^3].
+the altitude we will use a combination of a sonar [^3], our GPS and a barometer [^4].
 
 ### Horizontal velocity
 
@@ -113,7 +113,7 @@ effect to our advantage in this step : if we're drifting "back", we just have to
 force it to move forwards, cancelling the previous movement !
 
 {% image quadrotor_movement magick:2x alt:'Figure 4-1' %}{: .center-image }
-<center><strong>Figure 4 : How does a quadcopter get around ?</strong></center>
+<center><strong>Figure 4 : How does a quadcopter get around ? [^5]</strong></center>
 
 ### Position locking
 
@@ -154,7 +154,7 @@ carried out on our platform.
 One of the major drawbacks of our method is the use of a GPS, which restricts its
 usage to outdoor configurations. Nevertheless it is not a technical limitation to
 add an optical tracking method to the algorithm, for example with a [PX4Flow](https://pixhawk.org/modules/px4flow) sensor
-or a simple laser motion sensor, like the ADNS 9800 [^4] which is used in computer
+or a simple laser motion sensor, like the ADNS 9800 [^6] which is used in computer
 mice. They use a very interesting method called [optical flow](https://en.wikipedia.org/wiki/Optical_flow). The idea is that there
 is no need for an optical sensor to have a high resolution or a acute knowledge
 of what it's looking at. Instead, we compute a difference between two successive
@@ -162,7 +162,7 @@ images, from which we can deduce a movement vector which tells us in what direct
 and how fast we are moving.
 
 {% image optical_flow magick:2x alt:'Figure 5-1' %}{: .center-image }
-<center><strong>Figure 5 : Optical flow method</strong></center>
+<center><strong>Figure 5 : Optical flow method [^7]</strong></center>
 
 ## Wrapping up
 
@@ -176,6 +176,9 @@ Cheers !
 ---
 
 [^1]: IEEE International Conference on Robotics and Automation (ICRA), Seattle, 2015, [Link](http://rpg.ifi.uzh.ch/docs/ICRA15_Faessler.pdf)
-[^2]: Reference : MB1242 I2CXL Sonar, [Datasheet](http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf)
-[^3]: Reference : BMP085 Barometer, [Datasheet](https://www.adafruit.com/datasheets/BMP085_DataSheet_Rev.1.0_01July2008.pdf)
-[^4]: Reference : ADNS 9800 HD Optical Flow Sensor, [Datasheet](http://www.pixart.com.tw/upload/ADNS-9800%20DS_S_V1.0_20130514144352.pdf)
+[^2]: Source : (link)[(https://quadcopterproject.wordpress.com/quadcopters/)]
+[^3]: Reference : MB1242 I2CXL Sonar, [Datasheet](http://www.maxbotix.com/documents/I2CXL-MaxSonar-EZ_Datasheet.pdf)
+[^4]: Reference : BMP085 Barometer, [Datasheet](https://www.adafruit.com/datasheets/BMP085_DataSheet_Rev.1.0_01July2008.pdf)
+[^5]: Source : [pdf](http://biblion.epfl.ch/EPFL/theses/2007/3727/EPFL_TH3727.pdf)
+[^6]: Reference : ADNS 9800 HD Optical Flow Sensor, [Datasheet](http://www.pixart.com.tw/upload/ADNS-9800%20DS_S_V1.0_20130514144352.pdf)
+[^7]: Source : [link](http://www.thetcr.org/article/view/3200/html)
