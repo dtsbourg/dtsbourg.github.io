@@ -4,7 +4,7 @@
  <title>dtsbourg</title>
  <link href="http://dtsbourg.github.io/atom.xml" rel="self"/>
  <link href="http://dtsbourg.github.io/"/>
- <updated>2016-03-08T17:13:52+01:00</updated>
+ <updated>2016-03-08T17:15:41+01:00</updated>
  <id>http://dtsbourg.github.io</id>
  <author>
    <name>Dylan Bourgeois</name>
@@ -53,9 +53,7 @@ steps, the previous stabilization mechanisms are still in effect. For example,
 once we have stabilized our vertical velocity, we do not want our quad to fall like
 a rock if our new goal is to stabilize our horizontal velocity.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/modules.svg&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;
-&lt;img src=&quot;/assets/modules.svg&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;
-&lt;img src=&quot;/modules.svg&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/modules.svg&quot; alt=&quot;  &quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
 &lt;center&gt;&lt;strong&gt;Figure 1 : Stabilization phases&lt;/strong&gt;&lt;/center&gt;
 
@@ -73,7 +71,7 @@ a threshold under which we can assume the object is falling. Also, we will be lo
 at a mean value over a given number of samples to make sure we’re actually seeing
 what we want to see and not just noise : this is called a &lt;a href=&quot;https://en.wikipedia.org/wiki/Moving_average&quot;&gt;moving average&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/sma_pres_big.png&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/sma_pres_big.png&quot; alt=&quot;  &quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
 &lt;center&gt;&lt;strong&gt;Figure 2 : Acceleration measured over time (in ms)&lt;/strong&gt;&lt;/center&gt;
 
@@ -87,7 +85,7 @@ Once the threshold is crossed, we can start off the second phase : attitude cont
 (or whatever coordinate system you chose). You now need to figure out how to express
 your quad’s orientation in space. For that, three angles are used : &lt;em&gt;yaw&lt;/em&gt;, &lt;em&gt;pitch&lt;/em&gt; and &lt;em&gt;roll&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/attitude.jpg&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/attitude.jpg&quot; alt=&quot;  &quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;strong&gt;Figure 3 : A quad with an attitude [2] &lt;/strong&gt;&lt;/center&gt;
 
 &lt;p&gt;The first stabilization we need to accomplish is to get the quad back upright :
@@ -130,7 +128,7 @@ the back propellers will incline the drone forward and make it move. We can use 
 effect to our advantage in this step : if we’re drifting “back”, we just have to
 force it to move forwards, cancelling the previous movement !&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/quadrotor_movement.jpg&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/quadrotor_movement.jpg&quot; alt=&quot;  &quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;strong&gt;Figure 4 : How does a quadcopter get around ? [^5]&lt;/strong&gt;&lt;/center&gt;
 
 &lt;h3 id=&quot;position-locking&quot;&gt;Position locking&lt;/h3&gt;
@@ -201,7 +199,7 @@ of what it’s looking at. Instead, we compute a difference between two successi
 images, from which we can deduce a movement vector which tells us in what direction
 and how fast we are moving.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/optical_flow.png&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/optical_flow.png&quot; alt=&quot;  &quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;strong&gt;Figure 5 : Optical flow method [^7]&lt;/strong&gt;&lt;/center&gt;
 
 &lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;

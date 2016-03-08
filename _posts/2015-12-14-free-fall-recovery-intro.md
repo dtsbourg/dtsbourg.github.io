@@ -39,9 +39,7 @@ steps, the previous stabilization mechanisms are still in effect. For example,
 once we have stabilized our vertical velocity, we do not want our quad to fall like
 a rock if our new goal is to stabilize our horizontal velocity.
 
-![test](/assets/modules.svg){: .center-image }
-![test]({{site.base_url}}/assets/modules.svg){: .center-image }
-![test](/modules.svg){: .center-image }
+![  ](/assets/modules.svg){: .center-image }
 
 <center><strong>Figure 1 : Stabilization phases</strong></center>
 
@@ -59,7 +57,7 @@ a threshold under which we can assume the object is falling. Also, we will be lo
 at a mean value over a given number of samples to make sure we're actually seeing
 what we want to see and not just noise : this is called a [moving average](https://en.wikipedia.org/wiki/Moving_average).
 
-![test](/assets/sma_pres_big.png){: .center-image }
+![  ](/assets/sma_pres_big.png){: .center-image }
 
 <center><strong>Figure 2 : Acceleration measured over time (in ms)</strong></center>
 
@@ -73,7 +71,7 @@ To define where a quadcopter is in space, you need your regular *x*, *y*, *z* co
 (or whatever coordinate system you chose). You now need to figure out how to express
 your quad's orientation in space. For that, three angles are used : *yaw*, *pitch* and *roll*.
 
-![test](/assets/attitude.jpg){: .center-image }
+![  ](/assets/attitude.jpg){: .center-image }
 <center><strong>Figure 3 : A quad with an attitude [2] </strong></center>
 
 The first stabilization we need to accomplish is to get the quad back upright :
@@ -116,7 +114,7 @@ the back propellers will incline the drone forward and make it move. We can use 
 effect to our advantage in this step : if we're drifting "back", we just have to
 force it to move forwards, cancelling the previous movement !
 
-![test](/assets/quadrotor_movement.jpg){: .center-image }
+![  ](/assets/quadrotor_movement.jpg){: .center-image }
 <center><strong>Figure 4 : How does a quadcopter get around ? [^5]</strong></center>
 
 ### Position locking
@@ -165,7 +163,7 @@ of what it's looking at. Instead, we compute a difference between two successive
 images, from which we can deduce a movement vector which tells us in what direction
 and how fast we are moving.
 
-![test](/assets/optical_flow.png){: .center-image }
+![  ](/assets/optical_flow.png){: .center-image }
 <center><strong>Figure 5 : Optical flow method [^7]</strong></center>
 
 ## Wrapping up
