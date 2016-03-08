@@ -40,6 +40,8 @@ once we have stabilized our vertical velocity, we do not want our quad to fall l
 a rock if our new goal is to stabilize our horizontal velocity.
 
 ![test](/assets/modules.svg){: .center-image }
+![test]({{site.base_url}}/assets/modules.svg){: .center-image }
+![test](/modules.svg){: .center-image }
 
 <center><strong>Figure 1 : Stabilization phases</strong></center>
 

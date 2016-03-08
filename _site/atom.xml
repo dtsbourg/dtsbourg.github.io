@@ -4,7 +4,7 @@
  <title>dtsbourg</title>
  <link href="http://dtsbourg.github.io/atom.xml" rel="self"/>
  <link href="http://dtsbourg.github.io/"/>
- <updated>2016-03-08T17:05:17+01:00</updated>
+ <updated>2016-03-08T17:13:52+01:00</updated>
  <id>http://dtsbourg.github.io</id>
  <author>
    <name>Dylan Bourgeois</name>
@@ -53,7 +53,9 @@ steps, the previous stabilization mechanisms are still in effect. For example,
 once we have stabilized our vertical velocity, we do not want our quad to fall like
 a rock if our new goal is to stabilize our horizontal velocity.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/modules.svg&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/modules.svg&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;
+&lt;img src=&quot;/assets/modules.svg&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;
+&lt;img src=&quot;/modules.svg&quot; alt=&quot;test&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
 &lt;center&gt;&lt;strong&gt;Figure 1 : Stabilization phases&lt;/strong&gt;&lt;/center&gt;
 
