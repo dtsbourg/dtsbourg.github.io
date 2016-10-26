@@ -1,37 +1,93 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>dtsbourg.github.io</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ site.url }}/{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1 >Hi !</h1>
+							<p>I'm <strong class="greet" style="display:inline;">Dylan,</strong><strong class="pub-key" style="display:none;">🔑 5C5F 8A8D 5C5E 388A 67F6  4246 B0F5 BE3A F86D DD7E 🔑 <br /></strong> a masters student in robotics at EPFL in Switzerland. <br /> I like to do stuff with computers. Come say hi !</p>
+							<div class="row links">
+								<div class ="2u">
+									<p></p>
+								</div>
+								<div class="1u">
+									<section>
+										<a href="https://github.com/dtsbourg" target="_blank" class="icon major fa-github"></a>
+									</section>
+								</div>
+								<div class="1u">
+									<section>
+										<a href="https://twitter.com/dtsbourg" target="_blank" class="icon major fa-twitter"></a>
+									</section>
+								</div>
+								<div class="1u">
+									<section>
+										<a class="icon major fa-lock" id="pgp"></a>
+									</section>
+								</div>
+								<div class="1u">
+									<section>
+										<a href="https://www.youtube.com/channel/UCXPcw8jizoL0svoj6SEGZkA" target="_blank" class="icon major fa-youtube-play"></a>
+									</section>
+								</div>
+								<div class="3u$">
+								</div>
+							</div>
+						</div>
+					</section>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.url }}/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.url }}/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.url }}/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+				<!-- One -->
+
+				<!-- Two -->
+
+				<!-- Three -->
+			</div>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script>		// Buttons
+					$(document).ready(function(){
+						$("#pgp").on('click', function(){
+							$(".pub-key").toggle();
+							$(".greet").toggle();
+						});
+					});</script>
+
+	</body>
+</html>
