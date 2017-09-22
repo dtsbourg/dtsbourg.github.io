@@ -11,6 +11,16 @@
 
 /* Reset */
 
+@font-face {
+	font-family: SF-UI-Display-Light;
+	src: url("fonts/SanFranciscoFont/SanFranciscoDisplay-Thin.otf");
+}
+
+@font-face {
+	font-family: Panton-SemiBold;
+	src: url("fonts/Panton-SemiBold.otf");
+}
+
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
 	strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
 	figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -24,6 +34,15 @@
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
+	}
+
+	header {
+		background-color: white;
+		color: #261c3e;
+		text-align: right;
+		padding: 1em;
+		padding-right: 2em;
+		font-family: SF-UI-Display-Light;
 	}
 
 	body {
@@ -1645,7 +1664,7 @@
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.55);
-		font-family: Avenir, Helvetica, sans-serif;
+		font-family: "SF-UI-Display-Light", Avenir, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: light;
 		line-height: 1.75;
@@ -1691,7 +1710,7 @@
 		}
 
 	strong, b {
-		color: #ffffff;
+		color: #373e41;
 		font-weight: bold;
 	}
 
@@ -1701,10 +1720,13 @@
 
 	p {
 		margin: 0 0 2em 0;
+		color: #373e41;
+		font-family: "SF-UI-Display-Light";
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #373e41;
+		font-family: "Panton-SemiBold";
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
@@ -1896,7 +1918,7 @@
 		border: solid 1px !important;
 		border-color: rgba(255, 255, 255, 0.15) !important;
 		border-radius: 3em;
-		color: #ffffff !important;
+		background-color: #FDB549 !important;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.6em;
@@ -1930,7 +1952,7 @@
 			-webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
 			-ms-transition: opacity 0.2s ease, -ms-transform 0.2s ease;
 			transition: opacity 0.2s ease, transform 0.2s ease;
-			background: #ffffff;
+			background: #FDB549 !important;
 			border-radius: 3em;
 			content: '';
 			height: 100%;
@@ -2007,7 +2029,8 @@
 			-webkit-pointer-events: none;
 			-ms-pointer-events: none;
 			pointer-events: none;*/
-			background-color: rgba(255, 255, 255, 0.5);
+			background-color: rgba(255, 255, 255, 1);
+			border-color: #373e41;
 		}
 
 		input[type="submit"]:hover,
@@ -2015,8 +2038,10 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: rgba(255, 255, 255, 0.7) !important;
+			/*border-color: rgba(255, 255, 255, 0.7) !important;*/
+			border-color: #373e41 !important;
 			background-color: rgba(255, 255, 255, 0.25) !important;
+			/*background-color: #fb5b71;*/
 		}
 
 			input[type="submit"]:hover:after,
@@ -3310,13 +3335,23 @@
 		position: relative;
 	}
 
+		#intro > .inner {
+			padding: 3em 7em 20em 7em ;
+			max-width: 100%;
+			width: 75em;
+		}
+
 		.wrapper > .inner {
-			padding: 5em 5em 3em 5em ;
+			padding: 3em 7em 2em 7em ;
 			max-width: 100%;
 			width: 75em;
 		}
 
 			@media screen and (max-width: 1680px) {
+
+				#intro > .inner {
+					padding: 4em 4em 20em 4em ;
+				}
 
 				.wrapper > .inner {
 					padding: 4em 4em 2em 4em ;
@@ -3329,13 +3364,20 @@
 				.wrapper > .inner {
 					width: 100%;
 				}
-
 			}
 
 			@media screen and (max-width: 736px) {
 
+				.wrapper #intro .inner {
+					padding: 3em 2em 10em 2em ;
+				}
+
 				.wrapper > .inner {
-					padding: 3em 2em 1em 2em ;
+					padding: 3em 2em 2em 2em ;
+				}
+
+				#intro {
+					background-attachment: scroll;
 				}
 
 			}
@@ -3405,6 +3447,9 @@
 				.wrapper.fullscreen {
 					padding: 2em 0;
 					min-height: 0;
+				}
+				body #intro {
+					background-position: center;
 				}
 
 					body.is-ie .wrapper.fullscreen {
@@ -3976,10 +4021,12 @@
 
 	#intro {
 		background-attachment: fixed;
-		background-image: url("images/intro.svg");
-		background-position: top right;
+		overflow: hidden;
+		background-image: url("images/bg2.svg");
+		background-position: bottom center;
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		/*background-size: 100% 140%;*/
+		background-color: white;
 	}
 
 		#intro p {
@@ -4005,7 +4052,7 @@
 		@media screen and (max-width: 1280px) {
 
 			#intro {
-				background-attachment: scroll;
+				/*background-attachment: scroll;*/
 			}
 
 		}
