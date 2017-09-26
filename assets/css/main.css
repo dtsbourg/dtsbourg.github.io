@@ -38,7 +38,7 @@
 
 	header {
 		background-color: white;
-		color: #261c3e;
+		color: #A059EC;
 		text-align: right;
 		padding: 1em;
 		padding-right: 2em;
@@ -2684,7 +2684,7 @@
 				}
 
 				.wrapper.style1-alt .icon.major:before {
-					color: #493382;
+					color: #A059EC;
 				}
 
 				.wrapper.style2 .icon.major:before {
@@ -2835,7 +2835,7 @@
 
 			ul.actions li {
 				display: inline-block;
-				padding: 0 1em 0 0;
+				padding: 0 1em 1em 0;
 				vertical-align: middle;
 			}
 
@@ -3336,7 +3336,7 @@
 	}
 
 		#intro > .inner {
-			padding: 3em 7em 20em 7em ;
+			padding: 3em 7em 7em 7em ;
 			max-width: 100%;
 			width: 75em;
 		}
@@ -3350,7 +3350,7 @@
 			@media screen and (max-width: 1680px) {
 
 				#intro > .inner {
-					padding: 4em 4em 20em 4em ;
+					padding: 4em 4em 7em 4em ;
 				}
 
 				.wrapper > .inner {
@@ -3364,12 +3364,16 @@
 				.wrapper > .inner {
 					width: 100%;
 				}
+
+				#intro {
+					background-attachment: scroll;
+				}
 			}
 
 			@media screen and (max-width: 736px) {
 
 				.wrapper #intro .inner {
-					padding: 3em 2em 10em 2em ;
+					padding: 3em 2em 2em 2em ;
 				}
 
 				.wrapper > .inner {
@@ -3391,7 +3395,7 @@
 		}
 
 		.wrapper.style1-alt {
-			background-color: #493382;
+			background-color: #A059EC;
 		}
 
 		.wrapper.style2 {
@@ -3448,8 +3452,10 @@
 					padding: 2em 0;
 					min-height: 0;
 				}
+
 				body #intro {
-					background-position: center;
+					/*background-position: center;*/
+					background-attachment: scroll;
 				}
 
 					body.is-ie .wrapper.fullscreen {
@@ -4019,14 +4025,20 @@
 
 /* Intro */
 
+	#intro a  {
+		color: 	#A059EC;
+
+	}
+
 	#intro {
 		background-attachment: fixed;
 		overflow: hidden;
 		background-image: url("images/bg.svg");
-		background-position: bottom center;
+		background-position: top center;
 		background-repeat: no-repeat;
-		/*background-size: 100% 140%;*/
+		background-size: 100% 140%;
 		background-color: white;
+
 	}
 
 		#intro p {
