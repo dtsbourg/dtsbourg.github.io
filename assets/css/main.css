@@ -1856,10 +1856,28 @@
 			overflow-x: auto;
 		}
 
+	.divider {
+		background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
+		background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
+		background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
+		background-image: linear-gradient(to right, #5e42a6, #b74e91);
+		-moz-transition: max-width 0.2s ease;
+		-webkit-transition: max-width 0.2s ease;
+		-ms-transition: max-width 0.2s ease;
+		transition: max-width 0.2s ease;
+		border-radius: 0.2em;
+		bottom: 0;
+		height: 0.5em;
+		position: absolute;
+		margin-left: 8%;
+		width: 84%;
+	}
+
 	hr {
 		border: 0;
 		border-bottom: solid 1px rgba(255, 255, 255, 0.15);
 		margin: 2em 0;
+		/* background: #fff; */
 	}
 
 		hr.major {
@@ -1918,7 +1936,6 @@
 		border: solid 1px !important;
 		border-color: rgba(255, 255, 255, 0.15) !important;
 		border-radius: 3em;
-		background-color: #FDB549 !important;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.6em;
@@ -1933,6 +1950,15 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+	}
+
+	.button.contactlinks {
+		background-color: #FDB549 !important;
+	}
+
+	.button.paperlink {
+		color:#373e41;
+		border-color: #373e41 !important;
 	}
 
 		input[type="submit"]:after,
@@ -2171,12 +2197,24 @@
 		border-radius: 0.25em;
 		border: solid 1px rgba(255, 255, 255, 0.15);
 		background: rgba(255, 255, 255, 0.05);
-		margin: 0 0 2em 0;
+		margin: 0 0 0 0;
+	}
+
+	.features p {
+		margin-bottom:1em;
+	}
+
+	.features p.abstract {
+		margin-top:1em;
+		margin-bottom:1.25em;
+		line-height:1.15;
+		text-align: justify;
+		color: darkgray;
 	}
 
 		.features section {
-			padding: 3.5em 3em 1em 7em ;
-			width: 50%;
+			padding: 1.5em 1em 0em 7em ;
+			width: 80%;
 			border-top: solid 1px rgba(255, 255, 255, 0.15);
 			position: relative;
 		}
@@ -2203,8 +2241,9 @@
 				-ms-transform: scale(1);
 				transform: scale(1);
 				position: absolute;
-				left: 3em;
-				top: 3em;
+				left: 2.5em;
+				top: 1.5em;
+				vertical-align: middle;
 				opacity: 1;
 			}
 
@@ -3407,11 +3446,13 @@
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: #fff;
+			/* background-color: rgba(149,61,117,0.1) */
 		}
 
 		.wrapper.style3-alt {
 			background-color: #953d75;
+			/* background-color: rgba(149,61,117,0.3) */
 		}
 
 		.wrapper.fullscreen {
@@ -4038,7 +4079,6 @@
 		background-repeat: no-repeat;
 		background-size: 100% 140%;
 		background-color: white;
-
 	}
 
 		#intro p {
@@ -4064,7 +4104,7 @@
 		@media screen and (max-width: 1280px) {
 
 			#intro {
-				/*background-attachment: scroll;*/
+				background-attachment: scroll;
 			}
 
 		}
