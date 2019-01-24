@@ -32,12 +32,9 @@
 							<h1 >Hi ! I'm Dylan.</h1>
 							<p>
 								I study robots and their brains at <a href="https://epfl.ch" class="getintouch"> EPFL</a> in Switzerland.
-								I was an intern<br /> on the LHCb experiment at <a href="https://lhcb.web.cern.ch/lhcb/" class="getintouch"> CERN</a>,
-								and am currently completing my <br />master thesis at the <a href="http://snap.stanford.edu/" class="getintouch">SNAP</a> laboratory in Stanford.
-								I'm trying to<br /> optimize my research interests, so feel free to help update my gradients<br /> by
-								getting in touch!
-
-								You can also check out my CV <a href="cv.pdf" target="_blank" class="getintouch">here</a>.
+								I am currently completing my <br />master thesis at the <a href="http://snap.stanford.edu/" class="getintouch">SNAP</a> laboratory in Stanford.
+								My research is aimed at <br />developing tools to better understand neural models and their impact.<br />
+								You can <a href="cv.pdf" target="_blank" class="getintouch">check out my CV</a> or get in touch <a href="mailto:contact@dtsbourg.me" class="getintouch">here</a>.
 							 </p>
 
 							<ul class="actions">
@@ -45,6 +42,12 @@
 									<a href="https://dtsbourg.github.io/thoughts" class="button special disabled contactlinks">
 										Thoughts
 										<span class="fas fa-pencil-alt" style="color: #261c3e;"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://blogs.letemps.ch/dylan-bourgeois/" class="button special disabled contactlinks">
+										Le Temps Blog
+										<span class="fa fa-newspaper" style="color: #261c3e;"></span>
 									</a>
 								</li>
 								<li>
@@ -61,12 +64,6 @@
 										<span class="fab fa-twitter" style="color: #261c3e;"></span>
 									</a>
 								</li>
-								<li>
-									<a href="mailto:contact@dtsbourg.me" class="button special disabled contactlinks">
-										Contact
-										<span class="fa fa-envelope" style="color: #261c3e;"></span>
-									</a>
-								</li>
 							</ul>
 						</div>
 					</section>
@@ -79,8 +76,10 @@
 							<p>
 								These publications span several concurrent domains, from the application of Machine Learning in High Energy Physics (HEP) to
                                 the development of novel characterizations of media bias.
-                                This is the product of diverse research interests
+                                This work is the product of diverse research interests
                                 and a variety of research opportunities that I have been lucky enough to pursue.
+								The overarching goal is to provide interpretable methods, useful in their application but
+								that also provide a broader understanding of the problem at hand.
 							</p>
 
 							<!-- _______________ SELECTION BIAS _______________ -->
@@ -90,21 +89,43 @@
 										<h3 style="display:inline;">
 											Selection Bias in News Coverage: Learning It, Fighting It
 										</h3>
-										<h5 style="display:inline;"> <span style="color:#b55190">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-											D. Bourgeois, J. Rappaz, K. Aberer
+										<h5>
+											<span style="color:#bbbbbb">D. Bourgeois, J. Rappaz, K. Aberer</span>
+											<span style="color:#b55190">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+											<span style="color:#b55190">WWW'18</span>
 										</h5>
-										<h5 style="color:#b55190">
-											WWW'18
-										</h5>
-									<p class="abstract">
+									<!-- <p class="abstract">
 										News entities have to select and filter the coverage they broadcast through their respective channels, since the set of world events is too large to be treated exhaustively. The subjective nature of this filtering induces biases due to, among other things, resource constraints, editorial guidelines, ideological affinities, or even the fragmented nature of the information at a journalist's disposal. The magnitude and direction of this bias are, however, widely unknown. The absence of ground truth, the sheer size of the event space, or the lack of an exhaustive set of absolute features to measure makes it difficult to observe the bias directly, to characterize the leaning's nature and to factor it out to ensure a neutral coverage of the news.
 <br /><br />
 										In this work, we introduce a methodology to capture the latent structure of media’s decision process at a large scale. Our contribution is multi-fold. First, we show media coverage to be predictable using personalization techniques, and evaluate our approach on a large set of events collected from the GDELT database. We then show that a personalized and parametrized approach not only exhibits higher accuracy in coverage prediction, but also provides an interpretable representation of the selection bias. Last, we propose a method able to select a set of sources by leveraging the latent representation. These selected sources provide a more diverse and egalitarian coverage, all while retaining the most actively covered events.
-									</p>
+									</p> -->
 									<ul class="actions">
 										<li><a href="https://selection-bias-www2018.github.io/" class="button small special disabled paperlink">Website</a></li>
 										<li><a href="https://github.com/selection-bias-www2018/selection-bias-code" class="button small special disabled paperlink">Code</a></li>
 										<li><a href="https://dl.acm.org/citation.cfm?id=3188724" class="button small special disabled paperlink">WWW'18 Proceedings</a></li>
+									</ul>
+								</section>
+							</div>
+
+							<!-- _______________ SELECTION BIAS _______________ -->
+							<div class="features">
+								<section>
+									<span class="icon major fa-file-text-o"></span>
+										<h3 style="display:inline;">
+											A Dynamic Embedding Model of the Media Landscape
+										</h3>
+										<h5>
+											<span style="color:#bbbbbb">J. Rappaz, D. Bourgeois, K. Aberer</span>
+											<span style="color:#b55190">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+											<span style="color:#b55190">WWW'19</span>
+										</h5>
+									<!-- <p class="abstract">
+										News entities have to select and filter the coverage they broadcast through their respective channels, since the set of world events is too large to be treated exhaustively. The subjective nature of this filtering induces biases due to, among other things, resource constraints, editorial guidelines, ideological affinities, or even the fragmented nature of the information at a journalist's disposal. The magnitude and direction of this bias are, however, widely unknown. The absence of ground truth, the sheer size of the event space, or the lack of an exhaustive set of absolute features to measure makes it difficult to observe the bias directly, to characterize the leaning's nature and to factor it out to ensure a neutral coverage of the news.
+<br /><br />
+										In this work, we introduce a methodology to capture the latent structure of media’s decision process at a large scale. Our contribution is multi-fold. First, we show media coverage to be predictable using personalization techniques, and evaluate our approach on a large set of events collected from the GDELT database. We then show that a personalized and parametrized approach not only exhibits higher accuracy in coverage prediction, but also provides an interpretable representation of the selection bias. Last, we propose a method able to select a set of sources by leveraging the latent representation. These selected sources provide a more diverse and egalitarian coverage, all while retaining the most actively covered events.
+									</p> -->
+									<ul class="actions">
+										<li><a href="https://www2019.thewebconf.org/" class="button small special disabled paperlink">Conference website</a></li>
 									</ul>
 								</section>
 							</div>
@@ -116,14 +137,14 @@
 										<h3 style="display:inline;">
 											Using holistic information in the Trigger
 										</h3>
-										<h5 style="display:inline;"> <span style="color:#b55190">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-											D. Bourgeois, C. Fitzpatrick, S. Stahl
-										</h5>
-										<h5 style="color:#b55190">
-											LHCb Public Note
+										<h5>
+											<span style="color:#bbbbbb">D. Bourgeois, C. Fitzpatrick, S. Stahl</span>
+											<span style="color:#b55190">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+											<span style="color:#b55190">LHCb Public Note</span>
+
 										</h5>
 
-									<p class="abstract">
+									<!-- <p class="abstract">
 										In order to achieve the data rates proposed for the future Run 3 upgrade of the LHCb detector,
 										new processing models must be developed to deal with the increased throughput. For this reason we
 										aim to investigate the feasibility of purely data-driven 'holistic' methods, with the constraint of
@@ -132,7 +153,7 @@
 										In particular, the use of machine learning based methods seems particularly suitable, potentially providing a
 										natural formulation for heuristic-free, unbiased filters whose objective would be to optimize between throughput
 										and bandwidth.
-									</p>
+									</p> -->
 									<ul class="actions">
 										<li><a href="https://inspirehep.net/record/1684792" class="button small special disabled paperlink">Inspire HEP (1684792)</a></li>
 										<li><a href="https://arxiv.org/abs/1808.00711" class="button small special disabled paperlink">arXiv:1808.00711</a></li>
@@ -148,20 +169,19 @@
 										<h3 style="display:inline;">
 											New approaches for track reconstruction in LHCb's Vertex Locator
 										</h3>
-										<h5 style="display:inline;"> <span style="color:#b55190">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-											C. Hasse, J. Albrecht, B. Couturier, D. Bourgeois, V. Coco, N. Nolte, S. Ponce
+										<h5>
+											<span style="color:#bbbbbb">C. Hasse, J. Albrecht, B. Couturier, D. Bourgeois, V. Coco, N. Nolte, S. Ponce</span>
+											<span style="color:#b55190">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+											<span style="color:#b55190">JHEP'18</span>
 										</h5>
-										<h5 style="color:#b55190">
-											JHEP'18
-										</h5>
-									<p class="abstract">
+									<!-- <p class="abstract">
 										Presenting a machine learning based approach to estimate the position and uncertainty of a VELO track’s closest
 										to beam state. The resolution of this prediction as well as its ability to estimate the uncertainty is shown to be superior.
 										While this is not a production ready solution yet, these preliminary results are promising and indicate that
 										a machine learning based approach might provide an alternative to the simplified Kalman Filter.
-									</p>
+									</p> -->
 									<ul class="actions">
-										<li><a href="#" class="button small special disabled paperlink">Poster - CHEP'18</a></li>
+										<li><a href="Poster_268-compressed.pdf" target="blank" class="button small special disabled paperlink">Poster - CHEP'18</a></li>
 										<li><a href="#" class="button small special disabled paperlink">Paper - JHEP'18</a></li>
 									</ul>
 								</section>
