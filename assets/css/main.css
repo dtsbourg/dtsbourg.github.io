@@ -17,8 +17,8 @@
 }
 
 @font-face {
-	font-family: Panton-SemiBold;
-	src: url("fonts/Panton-SemiBold.otf");
+	font-family: Rubik-SemiBold;
+	src: url('fonts/Rubik-SemiBold.ttf');
 }
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
@@ -1726,7 +1726,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #373e41;
-		font-family: "Panton-SemiBold";
+		font-family: "Rubik-SemiBold";
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
